@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Zyksa/Bread/issues"
   },
-  "homepage": "https://github.com/Zyksa/Bread#readme"
+  "homepage": "https://github.com/Zyksa/Bread#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  }
 }
