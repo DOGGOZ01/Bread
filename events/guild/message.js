@@ -26,8 +26,8 @@ module.exports = {
             console.error(e);
             await message.channel.send(new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setTitle(`**${langF.embed_title}** \`${GUILD.prefix}${command.name}\``)
-                .setDescription(`${message.author}, ${langF.command_error}`)
+                .setTitle(`**Erreur** \`$$$${command.name}\``)
+                .setDescription(`${e}`)
             );
         }
     }
