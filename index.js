@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-require('dotenv').config({path: '/root/botsbiscord/breadbot/.env'});
+require('dotenv').config({path: '/root/botsdiscord/breadbot/.env'});
 
 let token = process.env.DISCORD_TOKEN;
 
