@@ -12,6 +12,8 @@ module.exports = {
         const code = args.slice(args[0].length);
 
 
+        message.channel.reply("lang: " + lang + " code:  " + code);
+
 
 
 
