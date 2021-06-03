@@ -15,8 +15,8 @@ module.exports = {
             .setColor('#5e00ff')
             .setDescription("En réagissant ci-dessous vous pouvez créer un nouveau ticket d'aide")
 
-        message.channel.send(embed).then(() => {
-            message.react('📩');
+        message.channel.send(embed).then(e => {
+            e.react('📩');
         });
 
     }
