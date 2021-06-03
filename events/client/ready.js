@@ -5,7 +5,7 @@ module.exports = {
     execute: async (client, Discord) => {
         console.log('>>> Bread Bot is Online <<<');
 
-        client.user.setActivity("attendre vos demandes d'aides...")
+        await client.user.setActivity("attendre vos demandes d'aides...");
 
         // let i = 0;
         // setInterval(() => {
