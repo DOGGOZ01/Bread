@@ -6,7 +6,7 @@ module.exports = {
     aliases: null,
 
     run: async (message, args, client, Discord) => {
-        const exec = message.member;
+        const exec = message.member
 
         message.delete()
 
