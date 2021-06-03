@@ -8,7 +8,7 @@ module.exports = {
     run: async (message, args, client, Discord) => {
         const exec = message.member
 
-        message.delete()
+
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             message.reply("Tu n'as pas la permission de faire ça");
@@ -21,9 +21,12 @@ module.exports = {
 
         const deleteCount = parseInt(args[0], 10);
 
-        if (deleteCount > 99 || deleteCount < 1) return message.channel.send("<@" + exec + ">" + " mets un nombre entre 1 et 99.")
+        if (deleteCount > 99 || deleteCount < 1){
+            message.channel.send("<@" + exec + ">" + " mets un nombre entre 1 et 99")
+        }
 
-        message.channel.bulkDelete(deleteCount + 1).catch(error => message.reply(`Erreur: ${error}`));
+        message.delete()
+        message.channel.bulkDelete(deleteCount);
 
         message.channel.send("<@" + exec + ">" + " vient de supprimer: " + deleteCount + " messages");
     }
