@@ -19,6 +19,8 @@ module.exports = {
             message.reply("Indique le nombre de messages que tu souhaite supprimer.");
         }
 
+        console.log(reason)
+
         const deleteCount = parseInt(reason, 10);
 
         if (!deleteCount || deleteCount < 1 || deleteCount > 100) return message.reply("Tu peux pas supp + de 99 msg en 1 fois.");
@@ -26,6 +28,6 @@ module.exports = {
         message.channel.bulkDelete(deleteCount + 1).catch(error => message.reply(`Erreur: ${error}`));
 
 
-        message.channel.send(exec + " vient de supprimer: " + reason + " messages");
+        message.channel.send("<@" + exec + "> vient de supprimer: " + reason + " messages");
     }
 }
