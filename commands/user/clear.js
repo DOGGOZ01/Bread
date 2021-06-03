@@ -19,12 +19,12 @@ module.exports = {
             message.reply("Indique le nombre de messages que tu souhaite supprimer.");
         }
 
-        const deleteCount = parseInt(reason, 10);
+        const deleteCount = parseInt(args[0], 10);
 
-        if (reason > 99 || reason < 1) return message.reply("Mets un nombre entre 1 et 99.")
+        if (deleteCount > 99 || deleteCount < 1) return message.channel.send("<@" + exec + ">" + " mets un nombre entre 1 et 99.")
 
         message.channel.bulkDelete(deleteCount + 1).catch(error => message.reply(`Erreur: ${error}`));
 
-        message.channel.send("<@" + exec + ">" + " vient de supprimer: " + reason + " messages");
+        message.channel.send("<@" + exec + ">" + " vient de supprimer: " + deleteCount + " messages");
     }
 }
