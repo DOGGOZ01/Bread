@@ -8,9 +8,9 @@ module.exports = {
     run: async (message, args, client, Discord) => {
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(":bellhop: Créer un nouveau ticket")
+            .setTitle(":bellhop: Ouvrir une demande d'aide")
             .setColor('#5e00ff')
-            .setDescription("En réagissant ci-dessous vous pouvez créer un nouveau ticket d'aide")
+            .setDescription("Cliquez sur la réaction pour créer un channel dédié à votre problème.")
 
         message.channel.send(embed).then(e => {
             e.react('📩');
