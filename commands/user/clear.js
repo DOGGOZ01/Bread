@@ -16,7 +16,7 @@ module.exports = {
 
         const reason = args.slice(0).join(' ')
         if (!reason) {
-            message.reply("Indique le nombre de messages que tu souhaite supprimer.");
+            message.reply("Indique le nombre de messages que tu souhaites supprimer.");
         }
 
         const deleteCount = parseInt(args[0], 10);
@@ -28,6 +28,6 @@ module.exports = {
         message.delete()
         message.channel.bulkDelete(deleteCount);
 
-        message.channel.send("<@" + exec + ">" + " vient de supprimer: " + deleteCount + " messages");
+        message.channel.send("<@" + exec + ">" + " vient de supprimer : " + deleteCount + " messages");
     }
 }
