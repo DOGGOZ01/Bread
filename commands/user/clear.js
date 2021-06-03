@@ -21,7 +21,7 @@ module.exports = {
 
         const deleteCount = parseInt(reason, 10);
 
-        if (deleteCount < 1 || deleteCount > 100) return message.reply("Tu peux pas supp + de 99 msg en 1 fois.")
+        if (reason > 99 || reason < 1) return message.reply("Mets un nombre entre 1 et 99.")
 
         message.channel.bulkDelete(deleteCount + 1).catch(error => message.reply(`Erreur: ${error}`));
 
