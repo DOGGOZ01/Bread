@@ -4,7 +4,7 @@ require('dotenv').config({path: '/root/botsdiscord/breadbot/.env'});
 
 let token = process.env.DISCORD_TOKEN;
 
-const client = new Discord.Client({disableMentions: "everyone"});
+const client = new Discord.Client({disableMentions: "everyone", partials: ['MESSAGE', 'CHANNEL', 'REACTION']});
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();

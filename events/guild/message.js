@@ -14,9 +14,9 @@ module.exports = {
         const command = client.commands.get(command_name) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command_name));
         if (!command) return;
 
-        message.delete();
+        //message.delete();
 
-        if (command.admin && message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`[❌] <@${message.author.id}> Tu n'as pas la permission !`);
+        if (command.admin && !message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`[❌] <@${message.author.id}> Tu n'as pas la permission !`);
 
         if (command.args && !args.length) return message.channel.send(`[❌] <@${message.author.id}> Mauvaise utilisation de la commande !`);
 

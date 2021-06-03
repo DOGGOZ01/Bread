@@ -8,11 +8,13 @@ module.exports = {
     run: async (message, args, client, Discord) => {
 
         const embed = new Discord.MessageEmbed()
-            .setTitle()
-            .setColor()
-            .setDescription()
-            .addFields()
-            .setFooter()
+            .setTitle("Créer un nouveau ticket")
+            .setColor('#5e00ff')
+            .setDescription("En réagissant ci-dessous vous pouvez créer un nouveau ticket d'aide")
+
+        message.channel.send(embed).then(() => {
+            message.react('📩');
+        });
 
     }
 }
